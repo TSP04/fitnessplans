@@ -1,1 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Fitness Plans</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background: #f4f4f4;
+        }
 
+        /* Header Section */
+        header {
+            background: linear-gradient(to right, #0077b6, #00b4d8);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Plans Section */
+        .plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .plan {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .plan:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .plan img {
+            width: 100%; /* Ensure image scales to fit the card width */
+            height: 200px; /* Set a consistent height */
+            object-fit: cover; /* Ensures aspect ratio is preserved */
+            border-bottom: 2px solid #0077b6;
+        }
+
+        .plan h2 {
+            font-size: 1.8rem;
+            color: #0077b6;
+            margin: 20px 0 10px;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            color: #28a745;
+            margin: 10px 0;
+        }
+
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .plan ul li {
+            margin-bottom: 10px;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .plan ul li:before {
+            content: "✔";
+            color: #28a745;
+            margin-right: 10px;
+        }
+
+        .plan button {
+            background: #0077b6;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .plan button:hover {
+            background: #005f86;
+        }
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            background: #0077b6;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: #00b4d8;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tailored Fitness Plans</h1>
+        <p>Achieve your goals with personalized, expert-designed plans.</p>
+    </header>
+
+    <div class="container">
+        <div class="plans">
+            <div class="plan">
+                <img src="./img_treadmill_hero_mbl.webp" alt="Basic Plan">
+                <h2>Basic Plan</h2>
+                <p class="price">£20/month</p>
+                <ul>
+                    <li>Weekly workout plans</li>
+                    <li>Email support</li>
+                    <li>Progress tracking</li>
+                </ul>
+                <button onclick="location.href='form.html?plan=Basic'">Get Started</button>
+            </div>
+
+            <div class="plan">
+                <img src="./GettyImages-1192632672_header-1024x575.jpg.webp" alt="Advanced Plan">
+                <h2>Advanced Plan</h2>
+                <p class="price">£50/month</p>
+                <ul>
+                    <li>Custom fitness and meal plans</li>
+                    <li>Priority support</li>
+                    <li>Detailed progress tracking</li>
+                </ul>
+                <button onclick="location.href='form.html?plan=Advanced'">Sign Up Now</button>
+            </div>
+
+            <div class="plan">
+                <img src="./bench-press.jpg" alt="Premium Plan">
+                <h2>Premium Plan</h2>
+                <p class="price">£100/month</p>
+                <ul>
+                    <li>Personalized weekly updates</li>
+                    <li>One-on-one guidance</li>
+                    <li>24/7 support</li>
+                </ul>
+                <button onclick="location.href='form.html?plan=Premium'">Join Today</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Your Business Name. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
